@@ -104,7 +104,7 @@ class Encode {
 		}
 
 		// deal with BOM issue for utf-8 text
-		if ($this->to == 'UTF-8')
+		if ($this->to == 'UTF-8' && !is_null($str))
 		{
 			if (substr($str, 0, 3) == "\xef\xbb\xbf")
 			{
